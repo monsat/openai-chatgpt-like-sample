@@ -1,12 +1,16 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@anu-vue/nuxt': ^0.12.0
+  '@anu-vue/preset-theme-default': ^0.12.0
   '@unocss/nuxt': ^0.49.7
   '@vueuse/core': ^9.13.0
   '@vueuse/nuxt': ^9.13.0
   nuxt: ^3.2.2
 
 devDependencies:
+  '@anu-vue/nuxt': 0.12.0_@vueuse+core@9.13.0
+  '@anu-vue/preset-theme-default': 0.12.0
   '@unocss/nuxt': 0.49.7
   '@vueuse/core': 9.13.0
   '@vueuse/nuxt': 9.13.0_nuxt@3.2.2
@@ -35,6 +39,28 @@ packages:
 
   /@antfu/utils/0.7.2:
     resolution: {integrity: sha512-vy9fM3pIxZmX07dL+VX1aZe7ynZ+YyB0jY+jE6r3hOK6GNY2t6W8rzpFC4tgpbXUYABkFQwgJq2XYXlxbXAI0g==}
+    dev: true
+
+  /@anu-vue/nuxt/0.12.0_@vueuse+core@9.13.0:
+    resolution: {integrity: sha512-sqqIDxmjrKVvEzh3lAveLusGjolC8Ad0S0NDitHUzUPiG7H2DIxkFMuRZvi1PZbEVf0Y04R4arYScQGvDc8VrA==}
+    dependencies:
+      '@css-render/vue3-ssr': 0.15.12
+      '@nuxt/kit': 3.2.2
+      anu-vue: 0.12.0_@vueuse+core@9.13.0
+      defu: 6.1.2
+    transitivePeerDependencies:
+      - '@unocss/reset'
+      - '@vueuse/core'
+      - rollup
+      - supports-color
+      - vue
+      - vue-router
+    dev: true
+
+  /@anu-vue/preset-theme-default/0.12.0:
+    resolution: {integrity: sha512-a835rCYXo3heLW+Zfucdr+i/GqgbQQgiAfWoYyNL3CzJIUc3ZDu/EgiCBIquKhGJQqJEGG4sYmMrQh2vjKls0Q==}
+    dependencies:
+      defu: 6.1.2
     dev: true
 
   /@babel/code-frame/7.18.6:
@@ -340,6 +366,12 @@ packages:
     resolution: {integrity: sha512-9CB/MKf/wdvbfkUdfrj+OkEwZ5b7rws0eogJ4293h+7b6KX5toPwym+VQKmILafNB9YiehqY0DlNrDcDhdWHSQ==}
     dependencies:
       mime: 3.0.0
+    dev: true
+
+  /@css-render/vue3-ssr/0.15.12:
+    resolution: {integrity: sha512-AQLGhhaE0F+rwybRCkKUdzBdTEM/5PZBYy+fSYe1T9z9+yxMuV/k7ZRqa4M69X+EI1W8pa4kc9Iq2VjQkZx4rg==}
+    peerDependencies:
+      vue: ^3.0.11
     dev: true
 
   /@esbuild/android-arm/0.16.17:
@@ -737,6 +769,16 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /@floating-ui/core/1.2.1:
+    resolution: {integrity: sha512-LSqwPZkK3rYfD7GKoIeExXOyYx6Q1O4iqZWwIehDNuv3Dv425FIAE8PRwtAx1imEolFTHgBEcoFHm9MDnYgPCg==}
+    dev: true
+
+  /@floating-ui/dom/1.2.1:
+    resolution: {integrity: sha512-Rt45SmRiV8eU+xXSB9t0uMYiQ/ZWGE/jumse2o3i5RGlyvcbqOF4q+1qBnzLE2kZ5JGhq0iMkcGXUKbFe7MpTA==}
+    dependencies:
+      '@floating-ui/core': 1.2.1
+    dev: true
 
   /@iconify/types/2.0.0:
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
@@ -1739,6 +1781,19 @@ packages:
   /ansi-styles/6.2.1:
     resolution: {integrity: sha512-bN798gFfQX+viw3R7yrGWRqnrN2oRkEkUjjl4JNn4E8GxxbjtG3FbrEIIY3l8/hrwUwIeCZvi4QuOTP4MErVug==}
     engines: {node: '>=12'}
+    dev: true
+
+  /anu-vue/0.12.0_@vueuse+core@9.13.0:
+    resolution: {integrity: sha512-pf3+DRMg90LaNVK9Frhfv5eVkFK3is7j2RmcmtnmW0MIRFgFxq3aPTH243r5H7KJitWqb+G9d5mNG+MAOaBSxQ==}
+    peerDependencies:
+      '@unocss/reset': ^0.41.1
+      '@vueuse/core': ^9.6.0
+      vue-router: '4'
+    dependencies:
+      '@floating-ui/dom': 1.2.1
+      '@vueuse/core': 9.13.0
+      defu: 6.1.2
+      vue: 3.2.47
     dev: true
 
   /anymatch/3.1.3:

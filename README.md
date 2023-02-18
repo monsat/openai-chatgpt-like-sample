@@ -1,42 +1,46 @@
-# Nuxt 3 Minimal Starter
+# OpenAI API ChatGPT Like Sample - Nuxt 3 example app
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+See also: https://github.com/monsat/openai-quickstart-nuxt3
 
 ## Setup
 
-Make sure to install the dependencies:
+1. If you don’t have Node.js installed, [install it from here](https://nodejs.org/en/)
 
-```bash
-# yarn
-yarn install
+2. Clone this repository
 
-# npm
-npm install
+3. Navigate into the project directory
 
-# pnpm
-pnpm install
-```
+   ```bash
+   $ cd openai-chatgpt-like-sample
+   ```
 
-## Development Server
+4. Install the requirements
 
-Start the development server on http://localhost:3000
+   ```bash
+   $ pnpm install
+   ```
 
-```bash
-npm run dev
-```
+5. Make a copy of the example environment variables file
 
-## Production
+   ```bash
+   $ cp .env.example .env
+   ```
 
-Build the application for production:
+6. Add your [API key](https://beta.openai.com/account/api-keys) to the newly created `.env` file
 
-```bash
-npm run build
-```
+7. Run the app
 
-Locally preview production build:
+   ```bash
+   $ pnpm dev
+   ```
 
-```bash
-npm run preview
-```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## Usage
+
+Enter your text.
+
+⌘ + Enter (or `Ctrl` + Enter) to send api request.
+
+### Other Commands
+
+⌘ + `c` (or `Ctrl` + `c`) to copy to clipboard.

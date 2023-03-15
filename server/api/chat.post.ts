@@ -1,17 +1,13 @@
 import { Configuration, OpenAIApi } from 'openai'
+import type { ChatMessageResponse } from '@/composables/useChat'
 
 export default defineEventHandler(async (event) => {
   const { openaiApiKey: apiKey } = useRuntimeConfig()
   const {
-    prompt = '',
+    messages = [],
     temperature = 0.6,
     max_tokens = 2048,
   } = await readBody(event)
-
-  if (!prompt) {
-    const error = 'No prompt provided'
-    return event.node.res.end({ error, result: '' })
-  }
 
   const configuration = new Configuration({ apiKey })
   const openai = new OpenAIApi(configuration)
@@ -19,21 +15,21 @@ export default defineEventHandler(async (event) => {
   // OpenAI config
   const model = 'gpt-3.5-turbo'
 
-  const completion = await openai.createCompletion({
+  const completion = await openai.createChatCompletion({
     model,
-    prompt,
+    messages,
     temperature,
     max_tokens,
   })
 
-  console.log(completion)
+  // console.log(completion.data.choices)
 
-  const result = completion.data.choices[0].text?.trim() || ''
+  const results = (completion.data.choices || []) as ChatMessageResponse[]
   const prompt_tokens = completion.data.usage?.prompt_tokens || null
   const total_tokens = completion.data.usage?.total_tokens || null
 
   return {
-    result,
+    results,
     prompt_tokens,
     total_tokens,
   }
